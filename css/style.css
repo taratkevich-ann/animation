@@ -1,3 +1,24 @@
+@keyframes rotation_sc {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes rotation_mn {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes rotation_hr {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
 * {
   padding: 0;
   margin: 0; }
@@ -17,7 +38,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  margin-left: -150px;
+  margin-top: -150px; }
 
 .clock:after {
   content: '';
@@ -29,7 +51,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-left: -7.5px;
+  margin-top: -7.5px;
   z-index: 5; }
 .clock span:before {
   content: '';
@@ -40,21 +63,28 @@ body {
   border-top-left-radius: 30%;
   border-top-right-radius: 30%;
   position: absolute;
-  top: 100px;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1; }
+  margin-left: -3.5px;
+  margin-top: -40px;
+  z-index: 1;
+  animation: rotation_mn 3660s linear infinite; }
 .clock span:nth-child(2):before {
   width: 4px;
   height: 120px;
-  top: 120px;
+  top: 50%;
   background-color: red;
-  z-index: 3; }
+  margin-left: -2px;
+  margin-top: -60px;
+  z-index: 3;
+  animation: rotation_sc 60s linear infinite; }
 .clock span:last-child:before {
   width: 9px;
   height: 60px;
   background-color: purple;
-  top: 110px;
-  z-index: 2; }
+  margin-left: -4.5px;
+  margin-top: -30px;
+  z-index: 2;
+  animation: rotation_hr 86400s linear infinite; }
 
 /*# sourceMappingURL=style.css.map */
